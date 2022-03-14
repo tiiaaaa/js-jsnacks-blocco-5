@@ -59,7 +59,8 @@ const peopleArray = [
 ];
 
 const newpeopleArray = peopleArray.map((Element) => {
-    return Element.nome + Element.cognome
+    let drivingAgeStatement = (parseInt(Element["età"]) >= 18) ? "può guidare" : "non può guidare";
+    return `${Element.nome}, ${Element.cognome} ${drivingAgeStatement}`;
 });
 
 console.log(newpeopleArray)
